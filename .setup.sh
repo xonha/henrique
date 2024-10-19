@@ -103,6 +103,9 @@ PKG_UNINSTALL=(
   thunar
 )
 
+git clone https://github.com/xonha/hypr ~/Documents/hypr
+git clone https://github.com/xonha/nvim ~/Documents/nvim
+
 echo "Installing keyring..."
 sudo pacman -Sy --needed --noconfirm --removemake archlinux-keyring
 
