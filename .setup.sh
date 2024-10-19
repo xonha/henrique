@@ -105,9 +105,9 @@ PKG_UNINSTALL=(
 
 CONFIG_PATH="$HOME/.config"
 
-sudo rm -rf ~/"$CONFIG_PATH"/{hypr,nvim}
-git clone https://github.com/xonha/hypr ~/"$CONFIG_PATH"/hypr
-git clone https://github.com/xonha/nvim ~/"$CONFIG_PATH"/nvim
+sudo rm -rf ~/{hypr,nvim}
+git clone https://github.com/xonha/hypr "$CONFIG_PATH"/hypr
+git clone https://github.com/xonha/nvim "$CONFIG_PATH"/nvim
 
 echo "Installing keyring..."
 sudo pacman -Sy --needed --noconfirm --removemake archlinux-keyring
