@@ -103,8 +103,10 @@ PKG_UNINSTALL=(
   thunar
 )
 
+echo "Updating system..."
 echo "Installing keyring..."
 sudo pacman -Sy archlinux-keyring
+echo "Updating system part 2..."
 
 echo "Installing packages..."
 yay -Syu --needed --noconfirm --removemake "${PKG_INSTALL[@]}"
