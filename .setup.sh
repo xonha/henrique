@@ -119,6 +119,7 @@ cd "$CONFIG_PATH"/hypr && git remote set-url origin git@github.com:xonha/hypr.gi
 cd "$CONFIG_PATH"/nvim && git remote set-url origin git@github.com:xonha/nvim.git
 
 cp -r /tmp/home/. ~/
+rm -rf /tmp/home
 
 echo "Installing keyring..."
 sudo pacman -Sy --needed --noconfirm archlinux-keyring
