@@ -105,12 +105,23 @@ PKG_UNINSTALL=(
 
 CONFIG_PATH="$HOME/.config"
 
+echo "Removing existing configurations..."
 sudo rm -rf ~/.config/{hypr,nvim}
+
+echo "Cloning configurations..."
+git clone https://github.com/xonha/home /tmp/home
 git clone https://github.com/xonha/hypr "$CONFIG_PATH"/hypr
 git clone https://github.com/xonha/nvim "$CONFIG_PATH"/nvim
 
+echo "Setting up git remotes as SSH..."
+cd /tmp/home && git remote set-url origin git@github.com:xonha/home.git
+cd "$CONFIG_PATH"/hypr && git remote set-url origin git@github.com:xonha/hypr.git
+cd "$CONFIG_PATH"/nvim && git remote set-url origin git@github.com:xonha/nvim.git
+
+cp -r /tmp/home/. ~/
+
 echo "Installing keyring..."
-sudo pacman -Sy --needed --noconfirm --removemake archlinux-keyring
+sudo pacman -Sy --needed --noconfirm archlinux-keyring
 
 echo "Installing packages..."
 yay -Syu --needed --noconfirm --removemake "${PKG_INSTALL[@]}"
