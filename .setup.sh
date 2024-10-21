@@ -43,6 +43,7 @@ PKG_INSTALL=(
   zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
+  network-manager-applet
   keyd
 )
 
