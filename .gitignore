@@ -3,3 +3,4 @@
 !.gitignore
 !.zshrc
 !.setup.sh
+!.keyd.conf
