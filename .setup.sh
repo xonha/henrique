@@ -96,7 +96,6 @@ PKG_UNINSTALL=(
   galculator
   atril
   firefox
-  network-manager-applet
   networkmanager-dmenu-git
   thunar-volman
   thunar-media-tags-plugin
@@ -144,9 +143,11 @@ for package in "${PKG_UNINSTALL[@]}"; do
   yay -Rns "$package" --noconfirm
 done
 
-sudo cp ~/.keyd.conf /etc/keyd/default.conf
-sudo systemctl enable keyd
-sudo systemctl start keyd
-sudo keyd reload
+if [ "$(hostname)" = "t440s" ]; then
+  sudo cp ~/.keyd.conf /etc/keyd/default.conf
+  sudo systemctl enable keyd
+  sudo systemctl start keyd
+  sudo keyd reload
+fi
 
 echo "Done."
