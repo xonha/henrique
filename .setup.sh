@@ -118,6 +118,7 @@ cd /tmp/home && git remote set-url origin git@github.com:xonha/home.git
 cd "$CONFIG_PATH"/hypr && git remote set-url origin git@github.com:xonha/hypr.git
 cd "$CONFIG_PATH"/nvim && git remote set-url origin git@github.com:xonha/nvim.git
 
+rm -rf /tmp/home
 cp -r /tmp/home/. ~/
 rm -rf /tmp/home
 
