@@ -61,6 +61,8 @@ PKG_AUR_INSTALL=(
   aur/wlrctl
   aur/youtube-music-bin
   aur/lazydocker-bin
+  aur/zen-browser-bin
+  aur/whatstux
 )
 
 PKG_UNINSTALL=(
