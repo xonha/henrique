@@ -173,3 +173,4 @@ export PATH=/home/henrique/.sst/bin:$PATH
 
 # Created by `pipx` on 2024-08-25 02:49:25
 export PATH="$PATH:/home/henrique/.local/bin"
+source /usr/share/nvm/init-nvm.sh
