@@ -62,6 +62,7 @@ PKG_AUR_INSTALL=(
   aur/youtube-music-bin
   aur/lazydocker-bin
   aur/zen-browser-bin
+  aur/ferdium-bin
 )
 
 PKG_UNINSTALL=(
