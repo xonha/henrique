@@ -56,7 +56,6 @@ PKG_AUR_INSTALL=(
   aur/vesktop-bin
   aur/wdisplays
   aur/wl-gammarelay-rs
-  aur/todoist-nativefier
   aur/valent-git
   aur/wlrctl
   aur/youtube-music-bin
