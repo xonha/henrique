@@ -62,6 +62,7 @@ PKG_AUR_INSTALL=(
   aur/lazydocker-bin
   aur/zen-browser-bin
   aur/ferdium-bin
+  aur/zsh-theme-powerlevel10k-bin-git
 )
 
 PKG_UNINSTALL=(

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:/home/henrique/flutter/bin
@@ -9,8 +16,10 @@ export ANDROID_AVD_HOME=~/.android/avd
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
+# source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 v() {
   if [ -d "$1" ]; then
@@ -99,7 +108,6 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -160,12 +168,11 @@ alias lr='ls -R'
 alias lg='ls -l --group-directories-first'
 
 # git
-alias gcl='git clone --depth 1'
-alias gi='git init'
+alias g='git'
 alias ga='git add'
-alias gc='git commit -m'
-alias gp='git push origin master'
 alias gb='git checkout'
+alias gc='git commit -m'
+alias gcl='git clone --depth 1'
 
 export PATH="/home/henrique/.detaspace/bin:$PATH"
 
@@ -175,3 +182,6 @@ export PATH=/home/henrique/.sst/bin:$PATH
 # Created by `pipx` on 2024-08-25 02:49:25
 export PATH="$PATH:/home/henrique/.local/bin"
 source /usr/share/nvm/init-nvm.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
