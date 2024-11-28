@@ -63,6 +63,7 @@ PKG_AUR_INSTALL=(
   aur/zen-browser-bin
   aur/ferdium-bin
   aur/zsh-theme-powerlevel10k-bin-git
+  aur/nvm
 )
 
 PKG_UNINSTALL=(
