@@ -16,10 +16,8 @@ export ANDROID_AVD_HOME=~/.android/avd
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
-# source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 v() {
   if [ -d "$1" ]; then
@@ -108,6 +106,8 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # User configuration
 
