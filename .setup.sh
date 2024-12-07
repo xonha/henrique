@@ -55,7 +55,7 @@ PKG_AUR_INSTALL=(
   aur/google-chrome
   aur/vesktop-bin
   aur/wdisplays
-  aur/wl-gammarelay-rs
+  wl-gammarelay-rs-git
   aur/valent-git
   aur/wlrctl
   aur/youtube-music-bin
