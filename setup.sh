@@ -127,7 +127,7 @@ cp -r /tmp/home/. ~/
 rm -rf /tmp/home
 
 rm -rf /tmp/hypr
-cp -r /tmp/hype ~/.config
+cp -r /tmp/hypr ~/.config
 rm -rf /tmp/hypr
 
 rm -rf /tmp/nvim
