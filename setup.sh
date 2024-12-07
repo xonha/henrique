@@ -107,13 +107,8 @@ PKG_UNINSTALL=(
   thunar
 )
 
-CONFIG_PATH="$HOME/.config"
-
 echo "Removing existing configurations..."
-sudo rm -rf ~/.config/{hypr,nvim}
-sudo rm -rf /tmp/home
-sudo rm -rf /tmp/hypr
-sudo rm -rf /tmp/nvim
+sudo rm -rf ~/.config/{hypr,nvim} /tmp/{home,hypr,nvim}
 
 echo "Cloning configurations..."
 git clone https://github.com/xonha/home /tmp/home
@@ -125,14 +120,9 @@ cd /tmp/home && git remote set-url origin git@github.com:xonha/home.git
 cd /tmp/hypr && git remote set-url origin git@github.com:xonha/hypr.git
 cd /tmp/nvim && git remote set-url origin git@github.com:xonha/nvim.git
 
+echo "Copying configurations..."
 cp -r /tmp/home/. ~/
-rm -rf /tmp/home
-
-cp -r /tmp/hypr ~/.config
-rm -rf /tmp/hypr
-
-cp -r /tmp/nvim ~/.config
-rm -rf /tmp/nvim
+cp -r /tmp/hypr /tmp/nvim ~/.config
 
 echo "Installing keyring..."
 sudo pacman -Sy --needed --noconfirm archlinux-keyring
