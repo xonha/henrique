@@ -163,4 +163,3 @@ if [ "$(hostname)" = "t440s" ]; then
 fi
 
 echo "Done."
-cho "Done."
