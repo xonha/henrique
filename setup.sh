@@ -113,14 +113,26 @@ echo "Removing existing configurations..."
 sudo rm -rf ~/.config/{hypr,nvim}
 
 echo "Cloning configurations..."
-git clone https://github.com/xonha/home /tmp/home && rm -rf /tmp/home && cp -r /tmp/home/. ~/ && rm -rf /tmp/home
-git clone https://github.com/xonha/hypr /tmp/hypr && rm -rf /tmp/hypr && cp -r /tmp/hypr/. ~/ && rm -rf /tmp/hypr
-git clone https://github.com/xonha/nvim /tmp/nvim && rm -rf /tmp/nvim && cp -r /tmp/nvim/. ~/ && rm -rf /tmp/nvim
+git clone https://github.com/xonha/home /tmp/home
+git clone https://github.com/xonha/hypr /tmp/hypr
+git clone https://github.com/xonha/nvim /tmp/nvim
 
 echo "Setting up git remotes as SSH..."
 cd /tmp/home && git remote set-url origin git@github.com:xonha/home.git
 cd "$CONFIG_PATH"/hypr && git remote set-url origin git@github.com:xonha/hypr.git
 cd "$CONFIG_PATH"/nvim && git remote set-url origin git@github.com:xonha/nvim.git
+
+rm -rf /tmp/home
+cp -r /tmp/home/. ~/
+rm -rf /tmp/home
+
+rm -rf /tmp/hypr
+cp -r /tmp/hype ~/.config
+rm -rf /tmp/hypr
+
+rm -rf /tmp/nvim
+cp -r /tmp/nvim ~/.config
+rm -rf /tmp/nvim
 
 echo "Installing keyring..."
 sudo pacman -Sy --needed --noconfirm archlinux-keyring
@@ -151,3 +163,4 @@ if [ "$(hostname)" = "t440s" ]; then
 fi
 
 echo "Done."
+cho "Done."
