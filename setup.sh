@@ -33,6 +33,7 @@ PKG_INSTALL=(
   wofi
   wget
   waybar
+  mako
   noisetorch-bin
   lazygit
   hyprpicker
