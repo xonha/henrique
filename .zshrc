@@ -16,6 +16,8 @@ export ANDROID_AVD_HOME=~/.android/avd
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
+export BROWSER=/usr/bin/zen-browser
+
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
