@@ -16,6 +16,9 @@ export ANDROID_AVD_HOME=~/.android/avd
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
+export ENCORE_INSTALL="/home/henrique/.encore"
+export PATH="$ENCORE_INSTALL/bin:$PATH"
+
 export BROWSER=/usr/bin/zen-browser
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -172,9 +175,9 @@ alias lg='ls -l --group-directories-first'
 # git
 alias g='git'
 alias ga='git add'
-alias gb='git checkout'
 alias gc='git commit -m'
-alias gcl='git clone --depth 1'
+alias gb='git checkout'
+alias gnb='git checkout -b'
 
 export PATH="/home/henrique/.detaspace/bin:$PATH"
 
